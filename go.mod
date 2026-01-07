@@ -1,4 +1,4 @@
-module ghcat
+module github.com/eos175/ghcat
 
 go 1.24.0
 
