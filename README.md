@@ -27,7 +27,7 @@ It resolves branches, handles auth when needed, and stays pipe-friendly.
 ### Using Go
 
 ```bash
-go install github.com/youruser/ghcat@latest
+go install github.com/eos175/ghcat@latest
 ```
 
 ---
