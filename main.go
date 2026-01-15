@@ -31,7 +31,17 @@ func main() {
 func run(cmd *cobra.Command, args []string) error {
 	input := args[0]
 
-	if strings.HasPrefix(input, "https://raw.githubusercontent.com/") {
+	// https://gist.githubusercontent.com
+	// https://raw.githubusercontent.com
+	if strings.Contains(input, "githubusercontent.com") {
+		return fetchRaw(input)
+	}
+
+	// https://gist.github.com/owner/id
+	if strings.Contains(input, "gist.github.com") {
+		if !strings.HasSuffix(input, "/raw") {
+			input = strings.TrimSuffix(input, "/") + "/raw"
+		}
 		return fetchRaw(input)
 	}
 

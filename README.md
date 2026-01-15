@@ -74,6 +74,20 @@ ghcat https://raw.githubusercontent.com/owner/repo/branch/path/to/file.go
 
 ---
 
+### GitHub Gist URLs
+
+```bash
+ghcat https://gist.github.com/owner/gist_id
+```
+
+Example:
+
+```bash
+ghcat https://gist.github.com/eos175/cd4265e9d050c90dbfd11fa60f024732
+```
+
+---
+
 ## Piping (recommended)
 
 `ghcat` always writes plain text to `stdout`, making it ideal for pipes:
