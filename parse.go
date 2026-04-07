@@ -27,6 +27,13 @@ func parseURL(raw string) (owner, repo, branch, filePath string, err error) {
 	}
 
 	parts := strings.Split(strings.Trim(u.Path, "/"), "/")
+	if len(parts) == 2 {
+		owner = parts[0]
+		repo = parts[1]
+		filePath = "README.md"
+		return
+	}
+
 	if len(parts) < 5 {
 		err = errors.New("invalid GitHub URL")
 		return

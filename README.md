@@ -62,6 +62,13 @@ Example:
 ghcat https://github.com/golang/go/blob/master/src/fmt/print.go
 ```
 
+If you pass a repository URL without a file path, `ghcat` fetches `README.md`
+from the repository default branch.
+
+```bash
+ghcat https://github.com/owner/repo
+```
+
 ---
 
 ### Raw GitHub URLs
